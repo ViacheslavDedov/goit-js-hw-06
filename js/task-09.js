@@ -8,11 +8,14 @@ const refs = {
   
   function getNewColor(event) {
     event.currentTarget.value = color;
+    
     function color(fnColor) {
-      refs.body.style.backgroundColor = fnColor();
-      refs.textChangeColor.textContent = fnColor();
+      const currentColor = fnColor;
+
+      refs.body.style.backgroundColor = currentColor;
+      refs.textChangeColor.textContent = currentColor;
     }
-    color(getRandomHexColor);
+    color(getRandomHexColor());
   } 
 
 function getRandomHexColor() {
