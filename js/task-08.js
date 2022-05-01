@@ -7,12 +7,12 @@ refs.form.addEventListener('submit', onFormSubmit);
 function onFormSubmit(event) {
     event.preventDefault();
     
-    if (event.currentTarget.elements[0].value === '' || event.currentTarget.elements[1].value === '') {
+    if (event.currentTarget.elements.email.value === '' || event.currentTarget.elements.password.value === '') {
        return alert('Все поля должны быть заполнены');
     } 
     let theseFormSubmit = {};
-    theseFormSubmit.Email = event.currentTarget.elements[0].value;
-    theseFormSubmit.Password = event.currentTarget.elements[1].value;
+    theseFormSubmit.Email = event.currentTarget.elements.email.value;
+    theseFormSubmit.Password = event.currentTarget.elements.password.value;
     console.log(theseFormSubmit);
     refs.form.reset();    
 }

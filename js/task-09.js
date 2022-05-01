@@ -11,7 +11,8 @@ const refs = {
     function color(fnColor) {
       refs.body.style.backgroundColor = fnColor();
       refs.textChangeColor.textContent = fnColor();
-    }color(getRandomHexColor);
+    }
+    color(getRandomHexColor);
   } 
 
 function getRandomHexColor() {
